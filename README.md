@@ -21,7 +21,9 @@ npm run dev
 
 ## Deployment
 
-`npm run gh-pages`
+```bash
+npm run gh-pages
+```
 
 ## License
 
