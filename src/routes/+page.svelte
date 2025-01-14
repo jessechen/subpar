@@ -66,6 +66,7 @@
 </script>
 
 <main>
+    {@html '<!--Train favicon created by Milkghost Studio - Flaticon -->'}
     <header>
         <h1>NYC Subway on-time performance for {year}</h1>
         <input class="slider" type="range" id="year" min={initialYear} max="2024" bind:value={year}/>
