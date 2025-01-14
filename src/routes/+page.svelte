@@ -11,6 +11,9 @@
         public reliability: Map<number, number>;
 
         public constructor(name: string, color: string, performance: Array<number>) {
+            if (performance.length != 10) {
+                throw `${name} has array of ${performance.length} years, expected 10`
+            }
             this.name = name;
             this.color = color;
             this.reliability = new Map();
