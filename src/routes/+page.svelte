@@ -28,7 +28,7 @@
 
 <main>
     <header>
-        <h1>OTP for {year}</h1>
+        <h1>NYC Subway on-time performance for {year}</h1>
         <input class="slider" type="range" id="year" min={initialYear} max="2024" bind:value={year}/>
     </header>
     <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
@@ -47,6 +47,10 @@
 		width: 100%;
 		height: 100%;
 	}
+
+    h1 {
+        font-size: 28px;
+    }
 
 	.slider {
 		width: 100%;

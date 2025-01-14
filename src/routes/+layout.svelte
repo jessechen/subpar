@@ -6,5 +6,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
 	}
 </style>
