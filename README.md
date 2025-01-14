@@ -8,6 +8,8 @@ Data sources:
 * https://data.ny.gov/Transportation/MTA-Subway-Terminal-On-Time-Performance-2015-2019/f6rf-2a3t/about_data
 * https://data.ny.gov/Transportation/MTA-Subway-Terminal-On-Time-Performance-Beginning-/vtvh-gimj/about_data
 
+The 2015-2019 dataset does not include weekends, so I removed them from the 2020-2024 dataset to maintain the same metric.
+
 ## Production
 
 ~~http://jessechen.github.io/subpar/~~
