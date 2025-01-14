@@ -65,8 +65,11 @@
         [59.08, 59.48, 67.81, 54.27, 73.02, 86.32, 82.03, 77.42, 79.62, 77.26]));
 </script>
 
+<svelte:head>
+	<title>NYC Subway on-time performance</title>
+	<meta name="description" content="An interactive chart of weekday on-time performance for each MTA subway line from 2015 to 2024" />
+</svelte:head>
 <main>
-    {@html '<!--Train favicon created by Milkghost Studio - Flaticon -->'}
     <header>
         <h1>NYC Subway on-time performance for {year}</h1>
         <input class="slider" type="range" id="year" min={initialYear} max="2024" bind:value={year}/>

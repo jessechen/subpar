@@ -12,7 +12,7 @@ The 2015-2019 dataset does not include weekends, so I removed them from the 2020
 
 ## Production
 
-~~http://jessechen.github.io/subpar/~~
+[GitHub Pages](http://jessechen.github.io/subpar/)
 
 ## Dev Setup
 
