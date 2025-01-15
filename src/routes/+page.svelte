@@ -39,24 +39,24 @@
         [82.91, 77.50, 72.52, 67.77, 90.49, 93.50, 90.57, 90.59, 91.04, 91.14]));
     lines.push(new Line("A", "#0039A6", 
         [66.36,	62.43, 54.93, 52.31, 68.90, 81.63, 73.01, 69.06, 72.08, 76.21]));
-    lines.push(new Line("B", "#FF6319", 
-        [76.47, 67.40, 53.94, 54.90, 65.50, 81.12, 75.56, 68.27, 75.90, 64.63]));
     lines.push(new Line("C", "#0039A6", 
         [78.82, 69.23, 58.94, 56.18, 74.22, 87.38, 77.37, 68.82, 72.63, 71.26]));
-    lines.push(new Line("D", "#FF6319", 
-        [73.89, 66.46, 54.09, 54.45, 68.84, 82.34, 75.46, 72.62, 73.37, 71.45]));
     lines.push(new Line("E", "#0039A6", 
         [69.05, 67.23, 59.10, 56.60, 79.29, 87.15, 77.62, 71.75, 74.29, 76.62]));
+    lines.push(new Line("B", "#FF6319", 
+        [76.47, 67.40, 53.94, 54.90, 65.50, 81.12, 75.56, 68.27, 75.90, 64.63]));
+    lines.push(new Line("D", "#FF6319", 
+        [73.89, 66.46, 54.09, 54.45, 68.84, 82.34, 75.46, 72.62, 73.37, 71.45]));
     lines.push(new Line("F", "#FF6319", 
         [57.34, 58.16, 45.70, 45.22, 66.11, 82.11, 74.20, 71.34, 70.15, 69.59]));
+    lines.push(new Line("M", "#FF6319", 
+        [69.49, 67.18, 70.34, 68.43, 77.21, 90.74, 83.45, 79.38, 85.90, 83.34]));
     lines.push(new Line("G", "#6CBE45", 
         [67.55, 80.21, 73.62, 68.03, 79.06, 87.64, 85.43, 88.50, 86.26, 86.06]));
     lines.push(new Line("J/Z", "#996633", 
         [72.65, 64.70, 65.76, 61.52, 79.54, 90.62, 90.50, 84.84, 88.12, 81.66]));
     lines.push(new Line("L", "#A7A9AC", 
         [91.80, 90.35, 93.59, 90.58, 92.40, 94.00, 92.68, 91.12, 92.36, 91.45]));
-    lines.push(new Line("M", "#FF6319", 
-        [69.49, 67.18, 70.34, 68.43, 77.21, 90.74, 83.45, 79.38, 85.90, 83.34]));
     lines.push(new Line("N/W", "#FCCC0A", 
         [66.14, 61.71, 55.16, 57.62, 74.35, 76.97, 78.34, 76.33, 73.62, 75.21]));
     lines.push(new Line("Q", "#FCCC0A", 
@@ -66,8 +66,8 @@
 </script>
 
 <svelte:head>
-	<title>NYC Subway on-time performance</title>
-	<meta name="description" content="An interactive chart of weekday on-time performance for each MTA subway line from 2015 to 2024" />
+    <title>NYC Subway on-time performance</title>
+    <meta name="description" content="An interactive chart of weekday on-time performance for each MTA subway line from 2015 to 2024" />
 </svelte:head>
 <main>
     <header>
@@ -82,21 +82,21 @@
 </main>
 
 <style>
-	main {
-		width: calc(100vmin - 50px);
-		height: calc(100vmin - 50px);
-	}
+    main {
+        width: calc(100vmin - 50px);
+        height: calc(100vmin - 50px);
+    }
 
-	svg {
-		width: 100%;
-		height: 100%;
-	}
+    svg {
+        width: 100%;
+        height: 100%;
+    }
 
     h1 {
         font-size: 28px;
     }
 
-	.slider {
-		width: 100%;
-	}
+    .slider {
+        width: 100%;
+    }
 </style>
