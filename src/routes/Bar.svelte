@@ -5,7 +5,7 @@
 </script>
 
 <circle cx=20 cy={initialY+20} r=20 fill={data.color} />
-<text x=20 y={initialY+30} text-anchor="middle" fill={data.hasBlackText ? "black" : "white"} class="line-label">{data.name}</text>
+<text x=20 y={initialY+30} text-anchor="middle" fill={data.color == "#FCCC0A" ? "black" : "white"} class="line-label">{data.name}</text>
 <rect x=50 y={initialY} {width} height=40 fill={data.color} />
 <text x={width+70} y={initialY+30} class="bar-label">{data.reliability.get(year)}%</text>
 
