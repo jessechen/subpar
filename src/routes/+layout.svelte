@@ -1,6 +1,6 @@
 <script lang="ts">
-	let { children } = $props();
     export const prerender = true;
+	let { children } = $props();
 </script>
 
 {@render children?.()}

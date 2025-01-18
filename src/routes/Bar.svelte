@@ -9,15 +9,16 @@
 
 {#if leftName}
     <circle cx=20 cy={initialY+20} r=20 fill={data.color} />
-    <text x=20 y={initialY+30} text-anchor="middle" fill={data.color == "#FCCC0A" ? "black" : "white"} class="line-label">{leftName}</text>
+    <text x=20 y={initialY+32} text-anchor="middle" fill={data.color == "#FCCC0A" ? "black" : "white"} class="line-label">{leftName}</text>
 {/if}
 <circle cx=70 cy={initialY+20} r=20 fill={data.color} />
-<text x=70 y={initialY+30} text-anchor="middle" fill={data.color == "#FCCC0A" ? "black" : "white"} class="line-label">{rightName}</text>
+<text x=70 y={initialY+32} text-anchor="middle" fill={data.color == "#FCCC0A" ? "black" : "white"} class="line-label">{rightName}</text>
 <rect x=100 y={initialY} {width} height=40 fill={data.color} />
 <text x={width+120} y={initialY+30} class="bar-label">{data.reliability.get(year)}%</text>
 
 <style>
     .line-label {
+        font-family: 'Helvetica Neue', 'Arial Nova', Arial, Inter, Roboto, 'Nimbus Sans', sans-serif;
         font-size: 32px;
     }
 
