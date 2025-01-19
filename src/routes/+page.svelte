@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Bar from './Bar.svelte';
+    import Row from './Row.svelte';
 
     const initialYear: number = 2015;
     const lines: Array<Line> = [];
@@ -73,18 +73,22 @@
     <header>
         <h1>NYC Subway on-time performance for {year}</h1>
         <input class="slider" type="range" id="year" min={initialYear} max="2024" bind:value={year}/>
+        <aside class="legend">
+            <p class="left-legend">← less reliable</p>
+            <p class="right-legend">more reliable →</p>
+        </aside>
     </header>
     <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
         {#each lines as line, index}
-            <Bar data={line} {index} {year} />
+            <Row data={line} {index} {year} />
         {/each}
     </svg>
 </main>
 
 <style>
     main {
-        width: calc(100vmin - 50px);
-        height: calc(100vmin - 50px);
+        width: calc(100vmin - 100px);
+        height: calc(100vmin - 100px);
     }
 
     svg {
@@ -98,5 +102,23 @@
 
     .slider {
         width: 100%;
+    }
+
+    .legend {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .left-legend {
+        margin-left: calc(10vmin - 10px);
+    }
+
+    .right-legend {
+        margin-right: calc(10vmin - 10px);
+    }
+
+    p {
+        margin: 0 0 4px 0;
     }
 </style>
