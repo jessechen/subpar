@@ -119,6 +119,10 @@
         margin-bottom: 10px;
     }
 
+    .slider:active {
+        cursor: grabbing;
+    }
+
     .legend {
         display: flex;
         justify-content: space-between;
