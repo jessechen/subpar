@@ -71,8 +71,20 @@
 </svelte:head>
 <main>
     <header>
-        <h1>NYC Subway on-time performance for {year}</h1>
-        <input class="slider" type="range" id="year" min={initialYear} max="2024" bind:value={year}/>
+        <h1>{year} NYC Subway on-time performance</h1>
+        <input class="slider" type="range" id="year" min={initialYear} max="2024" bind:value={year} list="years"/>
+        <datalist id="years">
+            <option value="2015"></option>
+            <option value="2016"></option>
+            <option value="2017"></option>
+            <option value="2018"></option>
+            <option value="2019"></option>
+            <option value="2020"></option>
+            <option value="2021"></option>
+            <option value="2022"></option>
+            <option value="2023"></option>
+            <option value="2024"></option>
+        </datalist>
         <aside class="legend">
             <p class="left-legend">← less reliable</p>
             <p class="right-legend">more reliable →</p>
@@ -98,10 +110,13 @@
 
     h1 {
         font-size: 28px;
+        margin: 0;
     }
 
     .slider {
         width: 100%;
+        cursor: grab;
+        margin-bottom: 8px;
     }
 
     .legend {
