@@ -71,7 +71,7 @@
 </svelte:head>
 <main>
     <header>
-        <h1>{year} NYC Subway on-time performance</h1>
+        <h1>{year} NYC Subway <abbr title="A train is defined as being on-time if it arrives at its destination terminal on-time, early, or no more than five minutes late, and that has not skipped any planned station stops.">on-time</abbr> performance</h1>
         <input class="slider" type="range" id="year" min={initialYear} max="2024" bind:value={year} list="years"/>
         <datalist id="years">
             <option value="2015"></option>
@@ -109,14 +109,14 @@
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 26px;
         margin: 0;
     }
 
     .slider {
         width: 100%;
         cursor: grab;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
 
     .legend {
