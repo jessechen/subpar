@@ -96,6 +96,12 @@
         {/each}
     </svg>
 </main>
+<div class="controls">
+    <!-- Sort-descending icon created by yaicon - Flaticon -->
+     <button type="button">
+        <img src="/sort.png" height="32" width="32" alt="Sort by value"/>
+     </button>
+</div>
 
 <style>
     main {
@@ -109,14 +115,14 @@
     }
 
     h1 {
-        font-size: 26px;
+        font-size: 24px;
         margin: 0;
     }
 
     .slider {
         width: 100%;
         cursor: grab;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     .slider:active {
@@ -139,5 +145,20 @@
 
     p {
         margin: 0 0 4px 0;
+    }
+
+    .controls {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+    }
+
+    button {
+        cursor: pointer;
+        padding: 2px;
+    }
+
+    img {
+        display: block;
     }
 </style>
