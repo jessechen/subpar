@@ -4,11 +4,14 @@
     const initialYear: number = 2015;
     const lines: Array<Line> = [];
     let year: number = $state(2024);
+    let sortByValue: boolean = $state(false);
 
     class Line {
         public name: string;
         public color: string;
         public reliability: Map<number, number>;
+        public rank: Map<number, number>;
+        public index: number;
 
         public constructor(name: string, color: string, performance: Array<number>) {
             if (performance.length != 10) {
@@ -17,8 +20,10 @@
             this.name = name;
             this.color = color;
             this.reliability = new Map();
-            performance.forEach((perf, index) => {
-                this.reliability.set(index + initialYear, perf);
+            this.rank = new Map();
+            this.index = -1;
+            performance.forEach((perf, idx) => {
+                this.reliability.set(idx + initialYear, perf);
             });
         }
     }
@@ -63,6 +68,13 @@
         [70.59, 69.95, 65.60, 67.10, 84.00, 87.37, 77.50, 74.46, 78.35, 78.01]));
     lines.push(new Line("R", "#FCCC0A",
         [59.08, 59.48, 67.81, 54.27, 73.02, 86.32, 82.03, 77.42, 79.62, 77.26]));
+
+    lines.forEach((line, idx) => line.index = idx);
+    for (let y: number = 2015; y <= 2024; y++) {
+        lines.sort((p, q) => (q.reliability.get(y)??0) - (p.reliability.get(y)??0));
+        lines.forEach((line, idx) => line.rank.set(y, idx));
+    }
+    lines.sort((p, q) => p.index - q.index);
 </script>
 
 <svelte:head>
@@ -92,14 +104,14 @@
     </header>
     <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
         {#each lines as line, index}
-            <Row data={line} {index} {year} />
+            <Row data={line} {index} {year} {sortByValue}/>
         {/each}
     </svg>
 </main>
 <div class="controls">
     <!-- Sort-descending icon created by yaicon - Flaticon -->
-     <button type="button">
-        <img src="/sort.png" height="32" width="32" alt="Sort by value"/>
+     <button type="button" onclick={() => sortByValue = !sortByValue}>
+        <img src="sort.png" height="32" width="32" alt="Sort by value"/>
      </button>
 </div>
 

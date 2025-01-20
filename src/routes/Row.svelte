@@ -1,7 +1,9 @@
 <script lang="ts">
-    let { data, index, year } = $props();
-    const width: number = $derived((data.reliability.get(year) || 0) * 8);
-    const initialY: number = index*50;
+    let { data, index, year, sortByValue } = $props();
+    const width: number = $derived((data.reliability.get(year) ?? 0) * 8);
+    const nameY: number = index * 50;
+    const rankY: number = $derived((data.rank.get(year) ?? 0) * 50);
+    const initialY: number = $derived(sortByValue ? rankY : nameY);
 
     const rightName: string = data.name.includes('/') ? data.name.split('/')[1] : data.name
     const leftName: string = data.name.includes('/') ? data.name.split('/')[0] : ""
